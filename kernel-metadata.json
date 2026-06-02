@@ -1,0 +1,13 @@
+{
+  "id": "thirtysevenhhhh/autonomous-driving-yolov8",
+  "title": "autonomous-driving-yolov8",
+  "code_file": "kaggle_scripts/yolov8_kitti_training.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": false,
+  "enable_gpu": true,
+  "enable_internet": true,
+  "dataset_sources": [],
+  "competition_sources": [],
+  "kernel_sources": []
+}
