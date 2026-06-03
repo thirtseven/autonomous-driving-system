@@ -103,7 +103,6 @@ for section in doc.sections:
 
 fig_dir = '/mnt/c/Users/Lenovo/autonomous-driving-system/results/figures'
 
-# 封面
 for _ in range(6):
     doc.add_paragraph()
 
@@ -132,7 +131,6 @@ set_font(run, '宋体', 14, bold=False)
 
 doc.add_page_break()
 
-# 摘要
 add_heading_1(doc, '摘要')
 
 add_body_text(doc, '自动驾驶技术是人工智能和计算机视觉领域的重要研究方向，其核心任务之一是实时准确地检测和识别道路环境中的各种目标物体。随着深度学习技术的快速发展，基于卷积神经网络的目标检测算法在自动驾驶领域取得了显著进展。本文深入研究了基于YOLOv8的自动驾驶目标检测系统，系统地分析了模型架构设计、训练策略优化、数据增强技术等关键问题。')
@@ -150,7 +148,6 @@ set_line_spacing(p, 20)
 
 doc.add_page_break()
 
-# Abstract
 add_heading_1(doc, 'Abstract')
 
 add_body_text(doc, 'Autonomous driving technology is an important research direction in the fields of artificial intelligence and computer vision. One of its core tasks is to detect and identify various target objects in the road environment in real-time and accurately. With the rapid development of deep learning technology, object detection algorithms based on convolutional neural networks have made significant progress in the field of autonomous driving. This paper deeply studies the autonomous driving object detection system based on YOLOv8, and systematically analyzes key issues such as model architecture design, training strategy optimization, and data augmentation technology.')
@@ -168,7 +165,6 @@ set_line_spacing(p, 20)
 
 doc.add_page_break()
 
-# 目录
 add_heading_1(doc, '目  录')
 
 toc_items = [
@@ -197,7 +193,6 @@ for item, level in toc_items:
 
 doc.add_page_break()
 
-# 1 绪论
 add_heading_1(doc, '1 绪论')
 
 add_heading_2(doc, '1.1 研究背景与意义')
@@ -234,7 +229,6 @@ add_body_text(doc, '本文共分为五章，各章内容安排如下：第1章�
 
 doc.add_page_break()
 
-# 2 相关技术与理论基础
 add_heading_1(doc, '2 相关技术与理论基础')
 
 add_heading_2(doc, '2.1 自动驾驶系统概述')
@@ -273,7 +267,6 @@ add_body_text(doc, '在目标检测任务中，CNN主要用作特征提取器，
 
 doc.add_page_break()
 
-# 3 基于YOLOv8的目标检测系统设计
 add_heading_1(doc, '3 基于YOLOv8的目标检测系统设计')
 
 add_heading_2(doc, '3.1 系统总体架构')
@@ -310,7 +303,6 @@ add_body_text(doc, 'YOLOv8的检测头采用了解耦设计，将分类和回归
 
 doc.add_page_break()
 
-# 4 实验与结果分析
 add_heading_1(doc, '4 实验与结果分析')
 
 add_heading_2(doc, '4.1 实验环境与配置')
@@ -438,7 +430,6 @@ add_image_with_caption(doc, f'{fig_dir}/10_training_time.png', '图4-10 训练�
 
 doc.add_page_break()
 
-# 5 总结与展望
 add_heading_1(doc, '5 总结与展望')
 
 add_heading_2(doc, '5.1 研究工作总结')
@@ -469,7 +460,6 @@ add_body_text(doc, '未来的研究工作可以从以下几个方面展开：（
 
 doc.add_page_break()
 
-# 参考文献
 ref_title = doc.add_paragraph()
 ref_title.alignment = WD_ALIGN_PARAGRAPH.CENTER
 run = ref_title.add_run('参考文献')
@@ -509,7 +499,6 @@ for ref in references:
 
 doc.add_page_break()
 
-# 附录
 add_heading_1(doc, '附录')
 
 add_heading_2(doc, '附录A 实验数据与代码访问')
@@ -518,7 +507,7 @@ add_body_text(doc, '本研究的完整实验数据、模型代码和训练脚本
 
 add_body_text(doc, 'Kaggle Notebook（在线运行）：https://www.kaggle.com/code/thirtysevenhhhh/autonomous-driving-yolov8')
 
-add_body_text(doc, 'GitHub仓库（源代码）：https://github.com/user/autonomous-driving-system')
+add_body_text(doc, 'GitHub仓库（源代码）：https://github.com/thirtseven/autonomous-driving-system')
 
 add_heading_2(doc, '附录B 图表索引')
 
@@ -559,12 +548,11 @@ for i, (num, title, file) in enumerate(data):
             for run in paragraph.runs:
                 set_font(run, '宋体', 12, bold=False)
 
-# 保存
-output_path = '/mnt/c/Users/Lenovo/Desktop/石油监控/基于深度学习的自动驾驶目标检测技术研究.docx'
+output_path = '/mnt/c/Users/Lenovo/Desktop/石油监控/基于深度学习的自动驾驶目标检测技术研究-优化版.docx'
 doc.save(output_path)
 print(f"论文已生成：{output_path}")
 
-backup_path = '/mnt/wslg/Ubuntu-22.04/home/thirty/backup/基于深度学习的自动驾驶目标检测技术研究.docx'
+backup_path = '/mnt/wslg/Ubuntu-22.04/home/thirty/backup/基于深度学习的自动驾驶目标检测技术研究-优化版.docx'
 doc.save(backup_path)
 print(f"备份已保存：{backup_path}")
 
